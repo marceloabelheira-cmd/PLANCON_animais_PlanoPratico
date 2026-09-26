@@ -227,7 +227,6 @@
     font-size: 20px; color: var(--blue-900); font-weight:800; margin: 4px 0 4px;
   }
   .section-desc{ color: var(--gray-600); font-size:14.5px; line-height:1.6; margin: 0 0 22px; }
-  .na-text{ color: var(--gray-600); font-style: italic; margin:0; }
 
   .grid{
     display:grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
@@ -301,9 +300,8 @@
   .anexo-btn{
     display:inline-flex; align-items:center; gap:5px;
     background: var(--blue-100); color: var(--blue-700); text-decoration:none;
-    font-family:inherit; font-size:12.5px; font-weight:700;
+    font-size:12.5px; font-weight:700;
     padding:6px 12px; border-radius:8px; border:1px solid transparent;
-    appearance:none; cursor:pointer;
     transition: background .15s ease, border-color .15s ease;
   }
   .anexo-btn:hover{ background: var(--blue-600); color: var(--white); }
@@ -1100,40 +1098,6 @@ const DATA = {
         "deslocamento da fauna silvestre para áreas urbanas;",
         "atropelamento, ataques por animais domésticos e conflitos entre fauna e população;",
         "aumento da demanda por resgate de fauna."
-      ],
-      prepara: [
-        "mapear propriedades rurais e áreas com concentração de animais próximas a regiões suscetíveis aos incêndios;",
-        "orientar produtores sobre aceiros, manejo da vegetação e manutenção de áreas seguras;",
-        "definir áreas alternativas para evacuação dos rebanhos;",
-        "estabelecer rotas de fuga para animais de grande porte;",
-        "manter disponibilidade de caminhões, trailers e equipamentos de transporte;",
-        "identificar pontos alternativos de dessedentação;",
-        "orientar produtores a manter reservas estratégicas de alimento;",
-        "treinar brigadistas para reconhecimento de animais feridos e acionamento das equipes competentes;",
-        "capacitar equipes especializadas para manejo de fauna silvestre;",
-        "estabelecer fluxo de recebimento e destinação da fauna resgatada;",
-        "planejar ações de afugentamento preventivo da fauna quando tecnicamente indicadas e autorizadas."
-      ],
-      gatilhos: [
-        "nível crítico de risco de incêndio;",
-        "ocorrência de incêndio atingindo propriedades, unidades de conservação ou áreas com concentração animal;",
-        "necessidade de evacuação preventiva de animais;",
-        "registro de fauna ou rebanhos cercados pelo fogo;",
-        "registro significativo de animais queimados ou intoxicados;",
-        "solicitação municipal de apoio;",
-        "incapacidade local de resposta."
-      ],
-      resposta: [
-        "integrar equipe especializada ao SCI;",
-        "estabelecer áreas seguras para recepção dos animais;",
-        "realizar resgate somente em condições operacionais seguras;",
-        "realizar triagem veterinária;",
-        "promover estabilização de queimados e animais com comprometimento respiratório;",
-        "realizar evacuação de rebanhos ou outros animais quando indicada;",
-        "estabelecer pontos emergenciais de dessedentação;",
-        "realizar aporte nutricional emergencial quando houver perda dos recursos naturais;",
-        "encaminhar fauna silvestre exclusivamente conforme orientação e competência dos órgãos ambientais;",
-        "registrar todos os animais resgatados e suas respectivas destinações."
       ]
     },
     4: {
@@ -1147,27 +1111,6 @@ const DATA = {
         "interrupção de energia em instalações com sistemas automatizados;",
         "comprometimento de granjas, sistemas de ventilação, ordenha, aquecimento ou refrigeração;",
         "interrupção do abastecimento de água."
-      ],
-      prepara: [
-        "identificar estruturas com grande concentração animal dependentes de energia;",
-        "incentivar geradores e planos alternativos de abastecimento;",
-        "verificar condições estruturais de instalações;",
-        "prever remoção preventiva de animais;",
-        "cadastrar máquinas e equipamentos destinados à remoção de árvores e destroços."
-      ],
-      gatilhos: [
-        "alerta meteorológico de nível elevado ou muito elevado;",
-        "danos estruturais em instalações com animais;",
-        "interrupção prolongada de energia com risco à manutenção da vida ou bem-estar dos animais;",
-        "ocorrência simultânea de múltiplos chamados."
-      ],
-      resposta: [
-        "avaliação de segurança da cena;",
-        "resgate e retirada dos animais;",
-        "atendimento veterinário;",
-        "apoio emergencial para restabelecimento de energia, água e alimentação;",
-        "transporte para locais seguros;",
-        "isolamento de áreas com risco elétrico ou estrutural."
       ]
     },
     5: {
@@ -1183,26 +1126,6 @@ const DATA = {
         "mortalidade, especialmente entre animais confinados, idosos, braquicefálicos, neonatos e animais debilitados;",
         "mortalidade de fauna;",
         "redução de disponibilidade hídrica."
-      ],
-      prepara: [
-        "monitorar alertas de temperatura e ondas de calor;",
-        "emitir recomendações preventivas aos municípios, responsáveis e produtores;",
-        "mapear locais de grande concentração animal;",
-        "orientar sobre sombreamento, ventilação, água e redução do manejo nos horários mais quentes;",
-        "preparar fontes alternativas de água."
-      ],
-      gatilhos: [
-        "emissão de alerta oficial para onda de calor;",
-        "aumento de ocorrências relacionadas ao estresse térmico;",
-        "interrupção do abastecimento de água ou energia comprometendo instalações animais;",
-        "mortalidade animal acima do esperado."
-      ],
-      resposta: [
-        "articulação com municípios;",
-        "fornecimento emergencial de água quando necessário;",
-        "orientação à população;",
-        "suporte aos estabelecimentos com grande concentração animal;",
-        "atendimento e encaminhamento veterinário dos casos graves."
       ]
     },
     6: {
@@ -1214,18 +1137,6 @@ const DATA = {
         "mortandade de peixes, fauna ou animais domésticos;",
         "necessidade de evacuação de propriedades;",
         "solicitação do Comando do Incidente."
-      ],
-      prepara: 'NAO_APLICAVEL',
-      gatilhos: 'NAO_APLICAVEL',
-      resposta: [
-        "impedir acesso de equipes e animais às áreas contaminadas sem avaliação técnica;",
-        "integrar órgãos ambientais, sanitários e Defesa Civil;",
-        "estabelecer áreas de descontaminação quando aplicável;",
-        "retirar animais somente mediante avaliação de segurança;",
-        "realizar atendimento veterinário;",
-        "impedir consumo de água ou alimentos potencialmente contaminados;",
-        "realizar monitoramento ambiental e epidemiológico;",
-        "definir destinação apropriada de carcaças e resíduos contaminados."
       ]
     },
     7: {
@@ -1238,22 +1149,6 @@ const DATA = {
         "comprometimento de abrigos temporários;",
         "risco ocupacional para equipes e voluntários;",
         "necessidade de restrição de movimentação animal."
-      ],
-      prepara: 'NAO_APLICAVEL',
-      gatilhos: [
-        "comunicação de autoridade sanitária competente;",
-        "ocorrência de surto relacionado ao cenário de desastre;",
-        "identificação de aumento incomum de morbidade ou mortalidade;",
-        "necessidade de medidas de contenção sanitária."
-      ],
-      resposta: [
-        "ativação imediata da vigilância epidemiológica e defesa sanitária animal;",
-        "implantação de protocolos de isolamento;",
-        "uso obrigatório dos EPIs definidos para o risco;",
-        "controle da movimentação dos animais;",
-        "coleta de amostras quando indicada;",
-        "comunicação de risco;",
-        "articulação segundo os princípios de Saúde Única."
       ]
     },
     8: {
@@ -1285,17 +1180,6 @@ const DATA = {
         "necessidade de eutanásia emergencial por sofrimento irreversível;",
         "risco de contaminação ambiental por dejetos e fluidos biológicos;",
         "possível disseminação de agentes zoonóticos dependendo da espécie transportada."
-      ],
-      prepara: 'NAO_APLICAVEL',
-      gatilhos: 'NAO_APLICAVEL',
-      respostaLabel: "Sobre a operação",
-      resposta: [
-        "interdição total da via;",
-        "formação de congestionamento extenso;",
-        "necessidade de desvio de tráfego;",
-        "complexidade de atuação simultânea entre resgate humano e animal;",
-        "risco de colapso operacional local sem coordenação integrada;",
-        "necessidade de atuação conjunta entre múltiplos órgãos."
       ]
     }
   },
@@ -1462,23 +1346,18 @@ const DATA = {
       { nome: "Lei Federal nº 14.064, de 29 de setembro de 2020 — Lei Sansão", desc: "Aumenta as penas aplicáveis aos crimes de abuso e maus-tratos praticados contra cães e gatos.", url: "https://www.planalto.gov.br/ccivil_03/_Ato2019-2022/2020/Lei/L14064.htm" },
       { nome: "Lei Estadual nº 10.651, de 27 de dezembro de 2024", desc: "Institui, no Estado do Rio de Janeiro, a política de proteção, acolhimento e reabilitação de animais de estimação resgatados em situações de catástrofe.", url: "https://leisestaduais.com.br/rj/lei-ordinaria-n-10651-2024-rio-de-janeiro-institui-a-politica-de-protecao-e-acolhimento-e-reabilitacao-de-animais-de-estimacao-resgatados-em-virtude-de-catastrofes-naturais-no-estado-do-rio-de-janeiro" },
       { nome: "Lei Estadual nº 11.096, de 7 de janeiro de 2026 — Novo Código Estadual de Direito dos Animais", desc: "Estabelece princípios, direitos e deveres destinados à proteção, à dignidade e ao bem-estar dos animais no Estado do Rio de Janeiro.", url: "http://alerjln1.alerj.rj.gov.br/CONTLEI.NSF/b24a2da5a077847c032564f4005d4bf2/5b46e4f93b7a0d5303258d7e00641f01?OpenDocument=" },
-      { nome: "Decreto Federal nº 10.593, de 24 de dezembro de 2020", desc: "Dispõe sobre a organização e o funcionamento do Sistema Nacional de Proteção e Defesa Civil e do Conselho Nacional de Proteção e Defesa Civil e sobre o Plano Nacional de Proteção e Defesa Civil e o Sistema Nacional de Informações sobre Desastres.", url: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/decreto/d10593.htm" },
       { nome: "Decreto Federal nº 12.439, de 17 de abril de 2025", desc: "Institui o Programa Nacional de Proteção e Manejo Populacional Ético de Cães e Gatos e o Cadastro Nacional de Animais Domésticos.", url: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12439.htm" },
       { nome: "Decreto Federal nº 12.877, de 12 de março de 2026", desc: "Aprimora as sanções administrativas ambientais relacionadas a maus-tratos, abandono e violação dos deveres de cuidado, segurança e bem-estar animal.", url: "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2026/Decreto/D12877.htm" },
       { nome: "Resolução CONAMA nº 358, de 29 de abril de 2005", desc: "Dispõe sobre o tratamento e a disposição final dos resíduos dos serviços de saúde, aplicável, no que couber, à destinação de resíduos biológicos gerados nas operações de manejo animal.", url: "http://www2.mma.gov.br/port/conama/legiabre.cfm?codlegi=462" },
-      { nome: "Instrução Normativa MAPA nº 50, de 24 de setembro de 2013", desc: "Estabelece a lista oficial de doenças de notificação obrigatória ao Serviço Veterinário Oficial (SVO) no Brasil.", url: "https://www.gov.br/agricultura/pt-br/assuntos/sanidade-animal-e-vegetal/saude-animal/arquivos-das-publicacoes-de-saude-animal/IN502013.pdf" },
       { nome: "Instrução Normativa IBAMA nº 7, de 30 de abril de 2015", desc: "Regulamenta as categorias e os procedimentos para uso e manejo da fauna silvestre em cativeiro.", url: "https://www.ibama.gov.br/component/legislacao/?view=legislacao&legislacao=135756" },
       { nome: "Instrução Normativa IBAMA nº 5, de 13 de maio de 2021", desc: "Disciplina o funcionamento dos Centros de Triagem de Animais Silvestres — CETAS e a destinação dos animais silvestres recebidos.", url: "https://www.ibama.gov.br/component/legislacao/?view=legislacao&legislacao=139089" },
       { nome: "Resolução INEA nº 157, de 19 de outubro de 2018", desc: "Regulamenta o uso e o manejo da fauna silvestre nativa e exótica em cativeiro no Estado do Rio de Janeiro.", url: "http://www.inea.rj.gov.br/wp-content/uploads/2019/02/RESOLU%C3%87%C3%83O-INEA-N%C2%BA-157.pdf" },
-      { nome: "Resolução SEAPPA nº 22, de 27 de dezembro de 2021", desc: "Estabelece normas a serem cumpridas nas propriedades com atividade de guarda de animais apreendidos no Estado do Rio de Janeiro.", url: "https://www.normasbrasil.com.br/normas/estadual/rio-de-janeiro/resolucao/2021_120_19.html" },
       { nome: "Resolução CFMV nº 1.236, de 26 de outubro de 2018", desc: "Define e caracteriza crueldade, abuso e maus-tratos contra animais vertebrados.", url: "https://www.in.gov.br/materia/-/asset_publisher/Kujrw0TZC2Mb/content/id/47542721/do1-2018-10-29-resolucao-n-1-236-de-26-de-outubro-de-2018-47542637" },
-      { nome: "Resolução CFMV nº 829, de 25 de abril de 2006", desc: "Disciplina o atendimento médico-veterinário a animais silvestres/selvagens e dá outras providências.", url: "https://www.normasbrasil.com.br/norma/resolucao-829-2006_103231.html" },
       { nome: "Resolução CFMV nº 1.000, de 11 de maio de 2012", desc: "Dispõe sobre procedimentos e métodos de eutanásia em animais.", url: "http://ts.cfmv.gov.br/manual/arquivos/resolucao/1000.pdf" },
       { nome: "Resolução CFMV nº 1.321, de 24 de abril de 2020", desc: "Institui normas sobre os documentos no âmbito da clínica médico-veterinária, aplicável aos registros clínicos produzidos durante a operação.", url: "https://manual.cfmv.gov.br/arquivos/resolucao/1321.pdf" },
       { nome: "Resolução CFMV nº 1.511, de 28 de março de 2023", desc: "Estabelece diretrizes para a atuação de médicos-veterinários e zootecnistas em desastres em massa envolvendo animais domésticos e silvestres.", url: "http://ts.cfmv.gov.br/manual/arquivos/resolucao/1511.pdf" },
       { nome: "Resolução CFMV nº 1.596, de 26 de março de 2024", desc: "Estabelece as diretrizes gerais de responsabilidade técnica para programas, campanhas e mutirões de esterilização cirúrgica de cães e gatos voltados ao manejo populacional, substituindo a norma anterior de 2010.", url: "https://manual.cfmv.gov.br/arquivos/resolucao/1596_comentada.pdf" },
-      { nome: "Declaração Universal dos Direitos dos Animais, de 1978", desc: "Constitui referência ética para a proteção da vida, da integridade, da dignidade e do bem-estar dos animais.", url: "https://pt.wikipedia.org/wiki/Declara%C3%A7%C3%A3o_Universal_dos_Direitos_Animais" },
-      { nome: "CFMV — Plano Nacional de Contingência de Desastres em Massa Envolvendo Animais", desc: "1ª edição, 5 de outubro de 2020. Brasília: CFMV, 2020. Documento técnico de referência nacional que orienta a estruturação de planos de contingência estaduais e municipais para desastres envolvendo animais.", url: "https://www.cfmv.gov.br/plano-nacional-de-contingencia-de-desastres-em-massa-envolvendo-animal/comunicacao/publicacoes/2020/10/05/" }
+      { nome: "Declaração Universal dos Direitos dos Animais, de 1978", desc: "Constitui referência ética para a proteção da vida, da integridade, da dignidade e do bem-estar dos animais.", url: "https://pt.wikipedia.org/wiki/Declara%C3%A7%C3%A3o_Universal_dos_Direitos_Animais" }
     ],
     anexos: [
       { titulo: "ANEXO I — Procedimentos Técnicos de Busca e Resgate Animal", pdf: ANEXO1_PDF, arquivo: "PLANCON_ANEXO_I_Busca_e_Resgate.pdf" },
@@ -1557,27 +1436,6 @@ const DATA = {
 let stack = ["home"];
 
 function bullets(arr){ return `<ul class="bullets">${arr.map(t=>`<li>${t}</li>`).join('')}</ul>`; }
-
-/* Abre o PDF do anexo em nova aba a partir do data URI embutido.
-   Navegadores modernos bloqueiam a navegação direta de uma aba nova para uma
-   URL "data:" (fica em branco); convertendo para um Blob local isso é evitado. */
-function abrirAnexoPdf(i){
-  const a = DATA.planconMacro.anexos[i];
-  if (!a || !a.pdf) return;
-  try {
-    const base64 = a.pdf.split(',')[1];
-    const binary = atob(base64);
-    const bytes = new Uint8Array(binary.length);
-    for (let j = 0; j < binary.length; j++){ bytes[j] = binary.charCodeAt(j); }
-    const blob = new Blob([bytes], { type: 'application/pdf' });
-    const url = URL.createObjectURL(blob);
-    window.open(url, '_blank');
-    setTimeout(() => URL.revokeObjectURL(url), 60000);
-  } catch (e){
-    console.error('Erro ao abrir o anexo:', e);
-    window.open(a.pdf, '_blank');
-  }
-}
 
 function chipList(items, opts={}){
   const numbered = !!opts.numbered;
@@ -1900,7 +1758,7 @@ const SCREENS = {
             <span class="anexo-title">${a.titulo}</span>
             ${a.pdf
               ? `<span class="anexo-actions">
-                  <button type="button" class="anexo-btn" onclick="abrirAnexoPdf(${i})">${icon('external')}Ver</button>
+                  <a class="anexo-btn" href="${a.pdf}" target="_blank" rel="noopener noreferrer">${icon('external')}Ver</a>
                   <a class="anexo-btn" href="${a.pdf}" download="${a.arquivo}">${icon('download')}Baixar</a>
                 </span>`
               : `<span class="badge-soon inline">Em breve</span>`
@@ -1970,7 +1828,7 @@ function reuniaoScreen(id){
 /* ---------- Geração dinâmica das telas de Cenário e de Órgão (1 aba = 1 tela) ---------- */
 /* Card de subseção do cenário — ativa (com link) quando há conteúdo, ou "em breve" quando ainda não. */
 function cenarioSubCard(id, key, iconName, label, extraClass, data){
-  const ativo = (Array.isArray(data) && data.length > 0) || data === 'NAO_APLICAVEL';
+  const ativo = Array.isArray(data) && data.length > 0;
   return `
     <div class="card ${ativo ? extraClass : 'disabled'}" ${ativo ? `onclick="nav('cenario${id}-${key}')"` : ''}>
       <div class="icon">${icon(iconName)}</div>
@@ -2003,7 +1861,7 @@ Object.keys(DATA.cenarios).forEach(id => {
         ${cenarioSubCard(id, 'impactos', 'alert', 'Impactos esperados', '', d.impactos)}
         ${cenarioSubCard(id, 'prepara', 'shield', 'Ações de preparação', '', d.prepara)}
         ${cenarioSubCard(id, 'gatilhos', 'alert', 'Gatilhos de ativação', 'orange', d.gatilhos)}
-        ${cenarioSubCard(id, 'resposta', 'mobil', d.respostaLabel || 'Ações de resposta', 'orange', d.resposta)}
+        ${cenarioSubCard(id, 'resposta', 'mobil', 'Ações de resposta', 'orange', d.resposta)}
       </div>
     `
   };
@@ -2027,15 +1885,6 @@ Object.keys(DATA.cenarios).forEach(id => {
         <div class="panel">${bullets(d.prepara)}</div>
       `
     };
-  } else if (d.prepara === 'NAO_APLICAVEL'){
-    SCREENS[`cenario${id}-prepara`] = {
-      crumb: "Ações de preparação",
-      render: () => `
-        <div class="section-title">Ações de preparação</div>
-        <p class="section-desc">${d.titulo}</p>
-        <div class="panel"><p class="na-text">Não aplicável a este cenário.</p></div>
-      `
-    };
   }
   if (Array.isArray(d.gatilhos) && d.gatilhos.length){
     SCREENS[`cenario${id}-gatilhos`] = {
@@ -2049,33 +1898,14 @@ Object.keys(DATA.cenarios).forEach(id => {
         </div>
       `
     };
-  } else if (d.gatilhos === 'NAO_APLICAVEL'){
-    SCREENS[`cenario${id}-gatilhos`] = {
-      crumb: "Gatilhos de ativação",
-      render: () => `
-        <div class="section-title">Gatilhos de ativação</div>
-        <p class="section-desc">${d.titulo}</p>
-        <div class="panel"><p class="na-text">Não aplicável a este cenário.</p></div>
-      `
-    };
   }
   if (Array.isArray(d.resposta) && d.resposta.length){
-    const respostaLabel = d.respostaLabel || "Ações de resposta";
-    SCREENS[`cenario${id}-resposta`] = {
-      crumb: respostaLabel,
-      render: () => `
-        <div class="section-title">${respostaLabel}</div>
-        <p class="section-desc">${d.titulo}</p>
-        <div class="panel">${bullets(d.resposta)}</div>
-      `
-    };
-  } else if (d.resposta === 'NAO_APLICAVEL'){
     SCREENS[`cenario${id}-resposta`] = {
       crumb: "Ações de resposta",
       render: () => `
         <div class="section-title">Ações de resposta</div>
         <p class="section-desc">${d.titulo}</p>
-        <div class="panel"><p class="na-text">Não aplicável a este cenário.</p></div>
+        <div class="panel">${bullets(d.resposta)}</div>
       `
     };
   }
