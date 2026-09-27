@@ -353,6 +353,163 @@
     .macro-link .go{ margin-left:58px; }
   }
 
+  .axr-highlight{
+    display:flex; align-items:center; gap:16px;
+    background: var(--orange-100); border: 1.5px solid var(--orange-500);
+    border-radius: var(--radius); padding: 16px 20px; margin-top:12px;
+    cursor:pointer; transition: filter .15s ease;
+  }
+  .axr-highlight:hover{ filter: brightness(0.97); }
+  .axr-highlight .icon{
+    width:42px;height:42px;border-radius:11px; flex-shrink:0;
+    background: var(--orange-500); color: var(--white);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: var(--shadow);
+  }
+  .axr-highlight .icon svg{width:22px;height:22px;stroke:currentColor;fill:none;}
+  .axr-highlight .macro-text{ flex:1; min-width:0; }
+  .axr-highlight h3{ margin:0 0 2px; font-size:15px; color:var(--orange-600); font-weight:800; }
+  .axr-highlight p{ margin:0; font-size:12.5px; color:var(--gray-600); line-height:1.45; }
+  .axr-highlight .go{
+    flex-shrink:0; display:flex; align-items:center; gap:5px;
+    color: var(--orange-600); font-size:12.5px; font-weight:700;
+  }
+  .axr-highlight .go svg{width:12px;height:12px;stroke:currentColor;fill:none;}
+  @media (max-width:640px){
+    .axr-highlight{ flex-wrap:wrap; }
+    .axr-highlight .go{ margin-left:58px; }
+  }
+
+  .axr-legend{ display:flex; flex-wrap:wrap; gap:10px 20px; margin:0 0 18px; }
+  .axr-legend-item{ font-size:12.5px; color:var(--gray-600); display:flex; align-items:center; gap:6px; }
+  .axr-legend-badge{
+    display:inline-flex; align-items:center; justify-content:center;
+    min-width:22px; height:20px; padding:0 6px; border-radius:999px;
+    font-size:11px; font-weight:800;
+  }
+  .axr-list{ display:flex; flex-direction:column; gap:10px; margin-bottom:8px; }
+  .axr-item{ background:var(--surface); border:1px solid var(--gray-200); border-radius:12px; padding:14px 16px; box-shadow:var(--shadow); }
+  .axr-item-head{ display:flex; gap:12px; align-items:flex-start; margin-bottom:10px; }
+  .axr-item-head .num{
+    flex-shrink:0; width:24px;height:24px;border-radius:50%;
+    background:var(--blue-100); color:var(--blue-700);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800; font-size:11px;
+  }
+  .axr-item-head p{ margin:0; font-size:14px; line-height:1.55; color:var(--gray-800); }
+  .axr-roles{ display:flex; flex-wrap:wrap; gap:6px; margin-left:36px; }
+  .axr-chip{
+    display:inline-flex; align-items:center; gap:4px; font-size:12px; font-weight:600;
+    padding:4px 9px; border-radius:999px; cursor:pointer; border:1px solid transparent;
+    transition: filter .15s ease; background:none; font-family:inherit; appearance:none;
+  }
+  .axr-chip:hover{ filter:brightness(0.93); }
+  .axr-chip b{ font-weight:800; }
+  .axr-chip.papel-rp{ background:var(--blue-600); color:var(--white); }
+  .axr-chip.papel-r{ background:var(--blue-100); color:var(--blue-700); }
+  .axr-chip.papel-a{ background:var(--gray-100); color:var(--gray-600); }
+  .axr-legend-badge.papel-rp{ background:var(--blue-600); color:var(--white); }
+  .axr-legend-badge.papel-r{ background:var(--blue-100); color:var(--blue-700); }
+  .axr-legend-badge.papel-a{ background:var(--gray-100); color:var(--gray-600); }
+
+  .axr-title-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  .axr-title-row .section-title{ margin:4px 0; }
+  .axr-visual-btn{
+    display:inline-flex; align-items:center; gap:7px;
+    background: #b8271f; color: #ffffff; border:none;
+    font-family:inherit; font-size:13px; font-weight:700;
+    padding:9px 16px; border-radius:999px; cursor:pointer;
+    box-shadow: var(--shadow); transition: filter .15s ease;
+    white-space:nowrap;
+  }
+  .axr-visual-btn:hover{ filter:brightness(1.12); }
+  .axr-visual-btn svg{ width:15px;height:15px; stroke:currentColor; fill:none; }
+
+  .axr-visual-overlay{
+    position:fixed; inset:0; z-index:200; background:var(--gray-50);
+    display:flex; flex-direction:column;
+  }
+  .axr-visual-header{
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    padding:14px 20px; background:var(--brand-navy-1); color:var(--white);
+    flex-shrink:0; box-shadow: var(--shadow);
+  }
+  .axr-visual-header h2{ margin:0; font-size:16px; font-weight:800; }
+  .axr-visual-header p{ margin:2px 0 0; font-size:12px; color:#c9d7ec; }
+  .axr-visual-close{
+    display:inline-flex; align-items:center; gap:6px;
+    background: rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.35);
+    color:var(--white); font-family:inherit; font-size:13px; font-weight:700;
+    padding:8px 14px; border-radius:999px; cursor:pointer; flex-shrink:0;
+    transition: background-color .15s ease;
+  }
+  .axr-visual-close:hover{ background: rgba(255,255,255,.26); }
+  .axr-visual-close svg{ width:14px;height:14px; stroke:currentColor; fill:none; }
+
+  .axr-visual-scroll{ flex:1; overflow:auto; padding:0; background:var(--surface); }
+  .axr-visual-table{
+    border-collapse:separate; border-spacing:0; font-size:11.5px;
+    table-layout:fixed; width:1px; /* col widths below drive the real width */
+  }
+  .axr-visual-table th, .axr-visual-table td{
+    border-right:1px solid var(--gray-200); border-bottom:1px solid var(--gray-200);
+    padding:4px 6px; background:var(--surface); overflow:hidden;
+  }
+  .axr-visual-table thead th{
+    position:sticky; top:0; z-index:3; background:var(--brand-navy-2); color:var(--white);
+    font-weight:700; text-align:center; border-color: var(--brand-navy-2);
+  }
+  .axr-visual-table thead tr.axr-visual-org-row th{
+    height:78px; max-height:78px; vertical-align:bottom;
+    cursor:pointer; transition: filter .15s ease; padding:4px 2px 6px;
+  }
+  .axr-visual-table thead tr.axr-visual-org-row th:hover{ filter:brightness(1.3); }
+  .axr-visual-table thead tr.axr-visual-org-row th.axr-visual-corner{
+    cursor:default; vertical-align:middle; height:auto;
+  }
+  .axr-visual-table thead tr.axr-visual-org-row th.axr-visual-corner:hover{ filter:none; }
+  .axr-visual-table thead tr.axr-visual-org-row th span{
+    writing-mode: vertical-rl; transform: rotate(180deg);
+    display:inline-block; white-space:nowrap; font-size:10px; font-weight:700;
+    max-height:70px; overflow:hidden;
+  }
+  .axr-visual-corner{
+    position:sticky; left:0; z-index:5; background:var(--brand-navy-1) !important;
+  }
+  .axr-visual-corner.axr-visual-phase-corner{ left:0; }
+  .axr-visual-corner.axr-visual-act-corner{ left:22px; text-align:left !important; }
+  .axr-visual-phase-td{
+    position:sticky; left:0; z-index:2;
+    text-align:center; font-weight:800; font-size:10px; letter-spacing:.03em; padding:4px 2px;
+  }
+  .axr-visual-phase-td span{
+    writing-mode: vertical-rl; transform: rotate(180deg);
+    display:inline-block; white-space:nowrap;
+  }
+  .axr-visual-phase-td.fase-pre{ background:var(--lvl0-bg); color:var(--lvl0); }
+  .axr-visual-phase-td.fase-impacto{ background:var(--lvl2-bg); color:var(--lvl2); }
+  .axr-visual-phase-td.fase-pos{ background:var(--blue-100); color:var(--blue-700); }
+  .axr-visual-activity-td{
+    position:sticky; left:22px; z-index:2;
+    text-align:left; line-height:1.35; font-size:11.5px; color:var(--gray-800);
+    background:var(--surface); padding:5px 8px;
+  }
+  .axr-visual-activity-td .num{ font-weight:800; color:var(--blue-700); margin-right:4px; }
+  .axr-visual-cell{ text-align:center; padding:4px 2px; }
+  .axr-visual-badge{
+    display:inline-flex; align-items:center; justify-content:center;
+    min-width:20px; height:17px; padding:0 3px; border-radius:5px;
+    font-size:10px; font-weight:800;
+  }
+  .axr-visual-badge.rp{ background:var(--lvl3); color:var(--white); }
+  .axr-visual-badge.r{ background:var(--lvl1-bg); color:var(--lvl1); }
+  .axr-visual-badge.a{ background:transparent; color:var(--gray-600); font-weight:700; }
+  @media (max-width:640px){
+    .axr-visual-header{ padding:12px 14px; }
+    .axr-visual-header h2{ font-size:14px; }
+    .axr-visual-close span{ display:none; }
+  }
+
   .footlink{
     display:flex; align-items:center; justify-content:center; gap:6px;
     margin:14px auto 4px; width:fit-content;
@@ -559,6 +716,8 @@
 
 <footer>PLANCON Animais RJ · versão preliminar em desenvolvimento</footer>
 
+<div class="axr-visual-overlay" id="matrizVisualOverlay" style="display:none;" role="dialog" aria-modal="true" aria-label="Matriz AxR em formato visual"></div>
+
 <script>
 /* ---------- Ícones ---------- */
 const ICONS = {
@@ -603,6 +762,8 @@ const ICONS = {
   pin: `<path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/>`,
   calendar: `<rect x="3.5" y="5" width="17" height="16" rx="1.5"/><path d="M3.5 9.5h17"/><path d="M8 3v4M16 3v4"/><path d="M7.5 13.5h2M11 13.5h2M14.5 13.5h2M7.5 17h2M11 17h2"/>`,
   download: `<path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19.5h16"/>`,
+  fish: `<path d="M2.5 12c3-4.5 8-6.5 12.5-6.5 3 0 5.5 2.5 6.5 6.5-1 4-3.5 6.5-6.5 6.5-4.5 0-9.5-2-12.5-6.5z"/><path d="M21.5 12l2-3.2v6.4z"/><circle cx="15.5" cy="9.8" r="0.9" fill="currentColor"/>`,
+  sprout: `<path d="M12 21v-9"/><path d="M12 12c-4.5 0-7.5-3-7.5-7.5 4.5 0 7.5 3 7.5 7.5z"/><path d="M12 12c4.5 0 7.5-3.5 7.5-8-4.5 0-7.5 3.5-7.5 8z"/>`,
 };
 function icon(name){ return `<svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${ICONS[name]||''}</svg>`; }
 
@@ -650,30 +811,25 @@ const CENARIOS_INDEX = [
   { id: 7, nome: "Emergências sanitárias e eventos biológicos envolvendo animais", icon: 'virus', cardClass: '' },
   { id: 8, nome: "Tombamento de carga viva em rodovia com múltiplas vítimas animais", icon: 'truck', cardClass: 'orange' },
 ];
-const ORGS_META = {
-  sedec:    { icon: 'org',   cardClass: '' },
-  dcms:     { icon: 'city',  cardClass: 'orange' },
-  saude:    { icon: 'cross', cardClass: '' },
-  bemestar: { icon: 'paw',   cardClass: 'orange' },
-  seappadi: { icon: 'leaf',  cardClass: '' }
-};
-/* Índice completo dos órgãos do GRAC Animal — os 5 primeiros (slug em DATA.orgs) têm tela de
-   detalhe; os demais aparecem como "em elaboração", na mesma lógica dos Cenários 3-8. */
+/* Índice completo dos órgãos/setores do GRAC Animal, conforme a aba consolidada ATRIBUIÇÕES
+   (16 instituições/setores — mesma lógica de card ativo/"em elaboração" dos Cenários 3-8). */
 const ORGS_INDEX = [
-  { slug: 'sedec',    nome: "Secretaria de Estado de Defesa Civil – SEDEC-RJ / CBMERJ", icon: 'org',   cardClass: '' },
-  { slug: 'dcms',     nome: "Defesas Civis Municipais", icon: 'city',  cardClass: 'orange' },
-  { slug: 'saude',    nome: "Secretaria de Estado de Saúde", icon: 'cross', cardClass: '' },
-  { slug: 'bemestar', nome: "Bem-Estar Animal", icon: 'paw',   cardClass: 'orange' },
-  { slug: 'seappadi', nome: "Secretaria de Estado de Agricultura, Pecuária, Pesca, Abastecimento e Desenvolvimento do Interior – SEAPPADI", icon: 'leaf', cardClass: '' },
-  { slug: 'seas',     nome: "Secretaria de Estado do Ambiente e Sustentabilidade – SEAS / INEA", icon: 'leaf', cardClass: 'orange' },
-  { slug: 'sedsodh',  nome: "Secretaria de Estado de Desenvolvimento Social e Direitos Humanos – SEDSODH", icon: 'users', cardClass: '' },
-  { slug: 'seeduc',   nome: "Secretaria de Estado de Educação – SEEDUC", icon: 'book', cardClass: 'orange' },
-  { slug: 'setram',   nome: "Secretaria de Estado de Transporte e Mobilidade Urbana – SETRAM", icon: 'route', cardClass: '' },
-  { slug: 'pmerj',    nome: "Polícia Militar do Estado do Rio de Janeiro – PMERJ", icon: 'star', cardClass: 'orange' },
-  { slug: 'pcerj',    nome: "Polícia Civil do Estado do Rio de Janeiro – PCERJ", icon: 'star', cardClass: '' },
-  { slug: 'univvet',  nome: "Universidades, Faculdades e Hospitais Veterinários", icon: 'cap', cardClass: 'orange' },
-  { slug: 'ongs',     nome: "Organizações Não Governamentais, Associações e Protetores Locais", icon: 'heart', cardClass: '' },
-  { slug: 'crmv',     nome: "Conselho Regional de Medicina Veterinária do Estado do Rio de Janeiro – CRMV-RJ", icon: 'cross', cardClass: 'orange' },
+  { slug: 'sedec',            nome: "Secretaria de Estado de Defesa Civil – SEDEC-RJ / CBMERJ", icon: 'org',    cardClass: '' },
+  { slug: 'ses_bemestar',     nome: "SES — Superintendência de Ações Estratégicas em Proteção e Bem-Estar Animal", icon: 'paw',    cardClass: 'orange' },
+  { slug: 'ses_vigilancia',   nome: "SES — Vigilância em Saúde", icon: 'cross',  cardClass: '' },
+  { slug: 'seappadi',         nome: "SEAPPADI — Superintendência de Defesa Agropecuária", icon: 'leaf',   cardClass: 'orange' },
+  { slug: 'seappadi_fiperj',  nome: "SEAPPADI — FIPERJ", icon: 'fish',   cardClass: '' },
+  { slug: 'seappadi_emater',  nome: "SEAPPADI — EMATER-Rio", icon: 'sprout', cardClass: 'orange' },
+  { slug: 'seas',             nome: "Secretaria de Estado do Ambiente e Sustentabilidade – SEAS / INEA", icon: 'leaf',   cardClass: '' },
+  { slug: 'sedsodh',          nome: "Secretaria de Estado de Desenvolvimento Social e Direitos Humanos – SEDSODH", icon: 'users',  cardClass: 'orange' },
+  { slug: 'seeduc',           nome: "Secretaria de Estado de Educação – SEEDUC", icon: 'book',   cardClass: '' },
+  { slug: 'setram',           nome: "Secretaria de Estado de Transporte e Mobilidade Urbana – SETRAM", icon: 'route',  cardClass: 'orange' },
+  { slug: 'pmerj',            nome: "SEPM — Polícia Militar do Estado do Rio de Janeiro (PMERJ)", icon: 'star',   cardClass: '' },
+  { slug: 'pcerj',            nome: "SEPOL — Polícia Civil do Estado do Rio de Janeiro (PCERJ)", icon: 'star',   cardClass: 'orange' },
+  { slug: 'redesalvar',       nome: "Rede Salvar", icon: 'shield', cardClass: '' },
+  { slug: 'univvet',          nome: "Universidades, Faculdades e Hospitais Veterinários", icon: 'cap',    cardClass: 'orange' },
+  { slug: 'ongs',             nome: "ONGs / Protetores Independentes", icon: 'heart',  cardClass: '' },
+  { slug: 'crmv',             nome: "Conselho Regional de Medicina Veterinária do Estado do Rio de Janeiro – CRMV-RJ", icon: 'cross',  cardClass: 'orange' },
 ];
 
 const DATA = {
@@ -709,41 +865,9 @@ const DATA = {
         "coordenar exercícios simulados e capacitações em gestão de animais em desastres."
       ]
     },
-    dcms: {
-      org: "DEFESAS CIVIS MUNICIPAIS",
-      short: "Defesas Civis Municipais",
-      heading: null,
-      bullets: [
-        "realizar avaliação inicial da situação;",
-        "identificar número estimado e espécies de animais afetados;",
-        "acionar estruturas municipais responsáveis;",
-        "solicitar apoio estadual quando a capacidade local for excedida;",
-        "identificar locais para instalação de estruturas temporárias;",
-        "manter cadastro de recursos locais;",
-        "estabelecer comunicação com responsáveis pelos animais;",
-        "incluir o componente animal no PLANCON Municipal;",
-        "registrar dados das ocorrências e fornecer informações ao Estado."
-      ]
-    },
-    saude: {
-      org: "SECRETARIA DE ESTADO DE SAÚDE",
-      short: "Secretaria de Estado de Saúde",
-      heading: "Competências",
-      bullets: [
-        "coordenar vigilância epidemiológica relacionada às zoonoses em cenários de desastre;",
-        "apoiar protocolos de biossegurança;",
-        "avaliar riscos sanitários nos abrigos temporários;",
-        "integrar informações de Saúde Única;",
-        "apoiar investigações epidemiológicas;",
-        "orientar medidas relacionadas a leptospirose, raiva, esporotricose e demais agravos de interesse;",
-        "apoiar ações de controle de vetores;",
-        "estabelecer fluxos de comunicação entre vigilâncias municipal e estadual;",
-        "participar das decisões relacionadas a riscos sanitários decorrentes de cadáveres animais."
-      ]
-    },
-    bemestar: {
-      org: "BEM-ESTAR ANIMAL",
-      short: "Bem-Estar Animal",
+    ses_bemestar: {
+      org: "SES — SUPERINTENDÊNCIA DE AÇÕES ESTRATÉGICAS EM PROTEÇÃO E BEM-ESTAR ANIMAL (SAEPBA)",
+      short: "SES - SAEPBA",
       heading: "Competências",
       intro: "À Secretaria ou órgão estadual/municipal responsável pela Proteção e Bem-Estar Animal caberá, dentro de suas competências institucionais:",
       bullets: [
@@ -767,23 +891,68 @@ const DATA = {
         "apoiar ações educativas destinadas aos responsáveis pelos animais antes, durante e após o desastre;",
         "colaborar com o levantamento dos animais desaparecidos;",
         "comunicar aos órgãos competentes situações identificadas de abandono, maus-tratos ou outras possíveis infrações;",
+        "articular e apoiar a capacitação de recursos humanos para ações de proteção, acolhimento e manejo de animais resgatados;",
+        "apoiar os municípios nas demais ações de prevenção, mitigação, resgate, acolhimento e manejo dos animais atingidos;",
         "disponibilizar representante técnico para integrar a estrutura de coordenação do componente animal quando solicitado."
       ]
     },
-    seappadi: {
-      org: "SECRETARIA DE ESTADO DE AGRICULTURA, PECUÁRIA, PESCA, ABASTECIMENTO E DESENVOLVIMENTO DO INTERIOR – SEAPPADI",
-      short: "SEAPPADI",
+    ses_vigilancia: {
+      org: "SES — VIGILÂNCIA EM SAÚDE",
+      short: "SES - Vigilância em Saúde",
       heading: "Competências",
       bullets: [
+        "coordenar a vigilância epidemiológica relacionada às zoonoses em cenários de desastre;",
+        "apoiar protocolos de biossegurança;",
+        "avaliar riscos sanitários nos abrigos temporários;",
+        "integrar informações de Saúde Única;",
+        "apoiar investigações epidemiológicas;",
+        "orientar medidas relacionadas a leptospirose, raiva, esporotricose e demais agravos de importância zoonótica;",
+        "apoiar ações de controle de vetores;",
+        "estabelecer fluxos de comunicação entre vigilâncias municipal e estadual;",
+        "participar das decisões relacionadas a riscos sanitários decorrentes de cadáveres animais."
+      ]
+    },
+    seappadi: {
+      org: "SEAPPADI — SUPERINTENDÊNCIA DE DEFESA AGROPECUÁRIA",
+      short: "SEAPPADI - Def. Agropecuária",
+      heading: "Competências",
+      bullets: [
+        "monitorar riscos de doenças de notificação obrigatória;",
+        "coordenar as ações relativas aos animais de produção;",
+        "atuar na defesa sanitária animal;",
+        "apoiar medidas de evacuação de animais de produção;",
+        "apoiar logística de alimentação e dessedentação emergencial de rebanhos;",
+        "orientar movimentação e transporte animal quando houver restrições sanitárias;",
+        "articular apoio aos produtores afetados."
+      ]
+    },
+    seappadi_fiperj: {
+      org: "SEAPPADI — FIPERJ",
+      short: "SEAPPADI - FIPERJ",
+      heading: "Competências",
+      bullets: [
+        "prestar apoio técnico-científico nas ocorrências que envolvam peixes e demais organismos aquáticos (ambientes continentais, estuarinos e costeiros), da pesca e da aquicultura;",
+        "apoiar o levantamento e avaliação de mortalidade ou alterações da fauna aquática nas áreas atingidas;",
+        "contribuir para a avaliação dos impactos sobre os recursos pesqueiros, a pesca artesanal e a aquicultura;",
+        "articular entre entidades de pesquisa para diagnóstico, potenciais causas ou risco à sociedade;",
         "coordenar as ações relativas aos animais de produção;",
         "atuar na defesa sanitária animal;",
         "apoiar levantamento das propriedades rurais atingidas;",
-        "avaliar situação sanitária dos rebanhos;",
+        "avaliar situação sanitária das produções aquícolas e pescados;",
         "apoiar medidas de evacuação de animais de produção;",
+        "avaliar impactos sobre as produções aquícolas e pescados;",
+        "articular apoio aos produtores afetados."
+      ]
+    },
+    seappadi_emater: {
+      org: "SEAPPADI — EMATER-RIO",
+      short: "SEAPPADI - EMATER-Rio",
+      heading: "Competências",
+      bullets: [
         "orientar produtores rurais;",
-        "monitorar riscos de doenças de notificação obrigatória;",
+        "apoiar levantamento das propriedades rurais atingidas;",
+        "avaliar situação sanitária dos rebanhos;",
         "apoiar logística de alimentação e dessedentação emergencial de rebanhos;",
-        "orientar movimentação e transporte animal quando houver restrições sanitárias;",
         "avaliar impactos sobre a produção agropecuária;",
         "articular apoio aos produtores afetados."
       ]
@@ -797,7 +966,7 @@ const DATA = {
         "orientar captura, manejo, transporte e destinação da fauna resgatada;",
         "indicar unidades ou instituições aptas ao recebimento dos animais;",
         "avaliar impactos ambientais;",
-        "atuar em ocorrências dentro ou próximas a unidades de conservação;",
+        "atuar em ocorrências dentro ou nas zonas de amortecimento próximas a unidades de conservação;",
         "apoiar ações relacionadas a incêndios florestais e degradação de habitat;",
         "apoiar decisões sobre afugentamento de fauna quando tecnicamente indicado;",
         "estabelecer critérios para soltura e destinação;",
@@ -835,34 +1004,43 @@ const DATA = {
       short: "SETRAM",
       heading: "Competências",
       bullets: [
-        "apoiar a logística de transporte durante evacuações e operações;",
         "apoiar planejamento de rotas para deslocamento das equipes;",
-        "comunicar condições de mobilidade das vias;",
-        "apoiar articulação para transporte emergencial quando solicitado;",
-        "considerar, dentro das possibilidades técnicas e legais, necessidades relacionadas à evacuação das famílias acompanhadas por animais;",
-        "articular informações com operadores de transporte quando necessárias à operação."
+        "comunicar condições de mobilidade das vias."
       ]
     },
     pmerj: {
-      org: "POLÍCIA MILITAR DO ESTADO DO RIO DE JANEIRO – PMERJ",
-      short: "PMERJ",
+      org: "SEPM — POLÍCIA MILITAR DO ESTADO DO RIO DE JANEIRO (PMERJ)",
+      short: "SEPM (PMERJ)",
       heading: "Competências",
       bullets: [
-        "apoiar isolamento e segurança das áreas;",
+        "apoiar isolamento e segurança das áreas atingidas pela emergência;",
         "controlar acesso a áreas operacionais quando solicitado;",
         "apoiar segurança dos abrigos e bases de resgate;",
         "apoiar operações envolvendo animais quando houver risco à ordem pública;",
-        "colaborar na segurança de comboios e transportes especiais."
+        "colaborar na segurança de comboios e transportes especiais;",
+        "atuar nos casos de maus-tratos, abandono deliberado ou demais delitos identificados durante a operação, conforme atribuição legal."
       ]
     },
     pcerj: {
-      org: "POLÍCIA CIVIL DO ESTADO DO RIO DE JANEIRO – PCERJ",
-      short: "PCERJ",
+      org: "SEPOL — POLÍCIA CIVIL DO ESTADO DO RIO DE JANEIRO (PCERJ)",
+      short: "SEPOL (PCERJ)",
       heading: "Competências",
       bullets: [
         "atuar quando houver indícios de ilícitos relacionados aos animais;",
         "apoiar procedimentos relacionados à identificação de responsáveis quando houver necessidade investigativa;",
         "atuar nos casos de maus-tratos, abandono deliberado ou demais delitos identificados durante a operação, conforme atribuição legal."
+      ]
+    },
+    redesalvar: {
+      org: "REDE SALVAR",
+      short: "Rede Salvar",
+      heading: "Competências",
+      bullets: [
+        "mobilizar equipe especializada mediante acionamento conforme o nível de resposta previsto no PLANCON ou sob demandas pontuais;",
+        "apoiar ou executar, conforme atribuições e condições de segurança, resgate técnico animal durante a resposta;",
+        "realizar atendimento pré-hospitalar veterinário na resposta;",
+        "participar da avaliação pós-operação e elaboração de relatórios técnicos;",
+        "propor alterações e atualização dos planos, protocolos e procedimentos."
       ]
     },
     univvet: {
@@ -907,7 +1085,7 @@ const DATA = {
     },
     ongs: {
       org: "ORGANIZAÇÕES NÃO GOVERNAMENTAIS, ASSOCIAÇÕES E PROTETORES LOCAIS",
-      short: "ONGs e Protetores Locais",
+      short: "ONGs / Protetores Independentes",
       intro: [
         "As organizações da sociedade civil, grupos de proteção animal, associações e protetores independentes constituem importante rede de apoio comunitário, especialmente por seu conhecimento territorial e contato prévio com os animais e responsáveis das áreas afetadas.",
         "Sua atuação, entretanto, deverá ocorrer mediante cadastramento, autorização e integração à estrutura oficial de resposta."
@@ -1549,8 +1727,137 @@ const DATA = {
       identificacao: "4ª Reunião",
       data: "19/08/2026",
       local: "DGDEC — Sala do Diretor"
+    },
+    {
+      id: 5,
+      identificacao: "5ª Reunião",
+      data: "16/09/2026",
+      local: "DGDEC — Auditório"
     }
-  ]
+  ],
+  matrizAxR: {
+    titulo: "Matriz de Atividades × Responsabilidades (AxR)",
+    intro: "Ações dos principais órgãos com atribuições no Plano de Contingência de Emergências com Animais (16 instituições / 29 atividades), organizadas nas três fases da resposta: pré-impacto, impacto e pós-impacto.",
+    legenda: [
+      { codigo: "RP", label: "Responsável Principal", desc: "órgão com titularidade/coordenação direta da atividade" },
+      { codigo: "R", label: "Responsável", desc: "coparticipação direta na execução da atividade" },
+      { codigo: "A", label: "Apoia / Acompanha", desc: "envolvimento indireto ou de apoio pontual" }
+    ],
+    colunas: ['sedec','ses_bemestar','ses_vigilancia','crmv','seappadi','seappadi_fiperj','seappadi_emater','seas','sedsodh','seeduc','setram','pmerj','pcerj','redesalvar','univvet','ongs'],
+    categorias: [
+      { nome: "Coordenação", slugs: ['sedec'] },
+      { nome: "Saúde e Bem-Estar Animal", slugs: ['ses_bemestar','ses_vigilancia','crmv'] },
+      { nome: "Agropecuária e Pesca", slugs: ['seappadi','seappadi_fiperj','seappadi_emater'] },
+      { nome: "Fauna e Meio Ambiente", slugs: ['seas'] },
+      { nome: "Assistência Social, Educação e Logística", slugs: ['sedsodh','seeduc','setram'] },
+      { nome: "Segurança Pública", slugs: ['pmerj','pcerj'] },
+      { nome: "Apoio Técnico-Operacional e Sociedade Civil", slugs: ['redesalvar','univvet','ongs'] }
+    ],
+    fases: [
+      {
+        nome: "Pré-Impacto",
+        atividades: [
+          { num: 1, texto: "Estruturar, mobilizar e coordenar o GRAC na estrutura estadual de resposta, integrando as ações animais ao SCI", responsaveis: [
+            { slug: 'sedec', papel: 'RP' }, { slug: 'pmerj', papel: 'A' }, { slug: 'pcerj', papel: 'A' }
+          ]},
+          { num: 2, texto: "Identificar, cadastrar e capacitar pontos focais e equipes (recursos humanos) para ações de proteção, acolhimento e manejo de animais", responsaveis: [
+            { slug: 'sedec', papel: 'RP' }, { slug: 'ses_bemestar', papel: 'R' }, { slug: 'crmv', papel: 'A' }, { slug: 'redesalvar', papel: 'R' }, { slug: 'univvet', papel: 'A' }
+          ]},
+          { num: 3, texto: "Credenciar, cadastrar e orientar voluntários, ONGs e protetores independentes (identificação, segurança e definição de função) antes do início das atividades", responsaveis: [
+            { slug: 'sedec', papel: 'RP' }, { slug: 'univvet', papel: 'A' }, { slug: 'ongs', papel: 'R' }
+          ]},
+          { num: 4, texto: "Elaborar protocolos de biossegurança e critérios sanitários para estruturas veterinárias emergenciais e abrigos temporários", responsaveis: [
+            { slug: 'ses_vigilancia', papel: 'RP' }, { slug: 'crmv', papel: 'R' }
+          ]},
+          { num: 5, texto: "Orientar requisitos técnicos e responsabilidade profissional para funcionamento de Postos Médico-Veterinários, Hospitais de Campanha e Abrigos Temporários", responsaveis: [
+            { slug: 'sedec', papel: 'A' }, { slug: 'crmv', papel: 'RP' }
+          ]},
+          { num: 6, texto: "Monitorar riscos de doenças de notificação obrigatória e realizar vigilância epidemiológica das zoonoses em cenários de desastre", responsaveis: [
+            { slug: 'ses_vigilancia', papel: 'RP' }, { slug: 'seappadi', papel: 'R' }
+          ]},
+          { num: 7, texto: "Articular as REDECs e Defesas Civis municipais na estrutura estadual de resposta animal", responsaveis: [
+            { slug: 'sedec', papel: 'RP' }
+          ]},
+          { num: 8, texto: "Orientar produtores rurais e levantar previamente propriedades rurais e situação sanitária dos rebanhos em áreas de risco", responsaveis: [
+            { slug: 'seappadi', papel: 'R' }, { slug: 'seappadi_fiperj', papel: 'A' }, { slug: 'seappadi_emater', papel: 'RP' }
+          ]},
+          { num: 9, texto: "Realizar ações educativas de preparação para desastres envolvendo famílias e animais, e planejar critérios para colocalização segura entre abrigos de pessoas e de animais", responsaveis: [
+            { slug: 'ses_bemestar', papel: 'A' }, { slug: 'sedsodh', papel: 'R' }, { slug: 'seeduc', papel: 'R' }, { slug: 'ongs', papel: 'R' }
+          ]}
+        ]
+      },
+      {
+        nome: "Impacto",
+        atividades: [
+          { num: 10, texto: "Receber e avaliar solicitações de apoio dos municípios; mobilizar os recursos estaduais necessários", responsaveis: [
+            { slug: 'sedec', papel: 'RP' }
+          ]},
+          { num: 11, texto: "Coordenar as ações de busca e resgate animal, estabelecendo zoneamento operacional e a segurança das equipes", responsaveis: [
+            { slug: 'sedec', papel: 'RP' }, { slug: 'pmerj', papel: 'R' }
+          ]},
+          { num: 12, texto: "Executar/apoiar o resgate técnico animal e o atendimento pré-hospitalar veterinário na resposta", responsaveis: [
+            { slug: 'crmv', papel: 'A' }, { slug: 'redesalvar', papel: 'RP' }, { slug: 'univvet', papel: 'A' }, { slug: 'ongs', papel: 'A' }
+          ]},
+          { num: 13, texto: "Capturar, manejar, transportar e destinar tecnicamente a fauna silvestre resgatada, avaliando impactos ambientais em unidades de conservação e zonas de amortecimento", responsaveis: [
+            { slug: 'seas', papel: 'RP' }
+          ]},
+          { num: 14, texto: "Evacuar e apoiar logisticamente animais de produção (alimentação e dessedentação emergencial de rebanhos)", responsaveis: [
+            { slug: 'seappadi', papel: 'RP' }, { slug: 'seappadi_emater', papel: 'R' }
+          ]},
+          { num: 15, texto: "Orientar a movimentação/transporte de animais quando houver restrições sanitárias e atuar na defesa sanitária animal", responsaveis: [
+            { slug: 'seappadi', papel: 'RP' }
+          ]},
+          { num: 16, texto: "Avaliar mortalidade e impactos sobre a fauna aquática, a pesca artesanal e a aquicultura nas áreas atingidas", responsaveis: [
+            { slug: 'seappadi_fiperj', papel: 'RP' }
+          ]},
+          { num: 17, texto: "Incluir informações sobre os animais no cadastramento de desabrigados/desalojados e evitar que sua presença obstrua a evacuação das famílias", responsaveis: [
+            { slug: 'sedsodh', papel: 'RP' }
+          ]},
+          { num: 18, texto: "Disponibilizar, se possível, espaços da rede estadual de ensino para apoio logístico às operações quando necessário", responsaveis: [
+            { slug: 'seeduc', papel: 'RP' }
+          ]},
+          { num: 19, texto: "Apoiar o isolamento e a segurança das áreas atingidas, o controle de acesso às áreas operacionais e a segurança de abrigos e bases de resgate", responsaveis: [
+            { slug: 'pmerj', papel: 'RP' }
+          ]},
+          { num: 20, texto: "Apoiar o planejamento de rotas de deslocamento das equipes e comunicar as condições de mobilidade das vias", responsaveis: [
+            { slug: 'setram', papel: 'RP' }
+          ]},
+          { num: 21, texto: "Organizar e operar os abrigos temporários de animais (alimentação, dessedentação, higienização e manejo básico)", responsaveis: [
+            { slug: 'ses_bemestar', papel: 'R' }, { slug: 'ongs', papel: 'RP' }
+          ]},
+          { num: 22, texto: "Realizar triagem, atendimento clínico-veterinário, internação e procedimentos especializados dos animais resgatados", responsaveis: [
+            { slug: 'crmv', papel: 'R' }, { slug: 'redesalvar', papel: 'R' }, { slug: 'univvet', papel: 'RP' }
+          ]},
+          { num: 23, texto: "Investigar indícios de maus-tratos, abandono deliberado ou outros ilícitos relacionados a animais identificados na operação", responsaveis: [
+            { slug: 'pmerj', papel: 'R' }, { slug: 'pcerj', papel: 'RP' }
+          ]},
+          { num: 24, texto: "Apoiar tecnicamente as discussões sobre eutanásia clinicamente indicada, observando critérios técnicos, éticos e legais", responsaveis: [
+            { slug: 'crmv', papel: 'RP' }
+          ]}
+        ]
+      },
+      {
+        nome: "Pós-Impacto",
+        atividades: [
+          { num: 25, texto: "Apoiar a reunificação entre responsáveis e animais, incluindo campanhas oficiais de busca e divulgação previamente autorizada", responsaveis: [
+            { slug: 'sedsodh', papel: 'RP' }, { slug: 'ongs', papel: 'R' }
+          ]},
+          { num: 26, texto: "Avaliar danos e impactos ambientais pós-evento e integrar as ações de recuperação ambiental", responsaveis: [
+            { slug: 'seas', papel: 'RP' }
+          ]},
+          { num: 27, texto: "Apoiar os produtores rurais afetados na recuperação da produção agropecuária, aquícola e pesqueira", responsaveis: [
+            { slug: 'seappadi', papel: 'RP' }, { slug: 'seappadi_fiperj', papel: 'R' }, { slug: 'seappadi_emater', papel: 'R' }
+          ]},
+          { num: 28, texto: "Realizar avaliação pós-operação, elaborar relatórios técnicos e propor atualização de planos e protocolos", responsaveis: [
+            { slug: 'sedec', papel: 'R' }, { slug: 'redesalvar', papel: 'RP' }
+          ]},
+          { num: 29, texto: "Apoiar o acompanhamento clínico, o bem-estar e a recuperação dos animais resgatados após a fase emergencial", responsaveis: [
+            { slug: 'crmv', papel: 'R' }, { slug: 'univvet', papel: 'R' }, { slug: 'ongs', papel: 'R' }
+          ]}
+        ]
+      }
+    ]
+  }
 };
 
 /* ---------- Motor de telas (replica a lógica "1 aba = 1 tela" da planilha) ---------- */
@@ -1578,6 +1885,125 @@ function abrirAnexoPdf(i){
     window.open(a.pdf, '_blank');
   }
 }
+
+/* ---------- Matriz AxR: visualização em formato de planilha (tela cheia) ---------- */
+function faseSlugMatriz(nome){
+  if (/pré-impacto/i.test(nome)) return 'fase-pre';
+  if (/pós-impacto/i.test(nome)) return 'fase-pos';
+  return 'fase-impacto';
+}
+
+/* Rótulos curtos (estilo planilha de origem) usados só nos cabeçalhos da matriz visual;
+   nomes completos continuam em DATA.orgs.short e aparecem no tooltip/título ao passar o mouse. */
+const AXR_COL_LABELS = {
+  sedec: "SEDEC-RJ / CBMERJ",
+  ses_bemestar: "SES - SAEPBA",
+  ses_vigilancia: "SES - Vig. Saúde",
+  crmv: "CRMV-RJ",
+  seappadi: "SEAPPADI - Def. Agropec.",
+  seappadi_fiperj: "SEAPPADI - FIPERJ",
+  seappadi_emater: "SEAPPADI - EMATER-Rio",
+  seas: "SEAS / INEA",
+  sedsodh: "SEDSODH",
+  seeduc: "SEEDUC",
+  setram: "SETRAM",
+  pmerj: "SEPM (PMERJ)",
+  pcerj: "SEPOL (PCERJ)",
+  redesalvar: "Rede Salvar",
+  univvet: "Universid. / Hosp. Vet.",
+  ongs: "ONGs"
+};
+const AXR_PHASE_COL_W = 22;
+const AXR_ACT_COL_W = 360;
+const AXR_ORG_COL_W = 30;
+
+function renderMatrizVisualHTML(){
+  const M = DATA.matrizAxR;
+  const cols = M.colunas;
+  const catBySlug = {};
+  M.categorias.forEach(cat => cat.slugs.forEach(s => { catBySlug[s] = cat.nome; }));
+
+  const colgroup = `
+    <colgroup>
+      <col style="width:${AXR_PHASE_COL_W}px">
+      <col style="width:${AXR_ACT_COL_W}px">
+      ${cols.map(() => `<col style="width:${AXR_ORG_COL_W}px">`).join('')}
+    </colgroup>
+  `;
+
+  const orgRow = cols.map(slug => {
+    const full = (DATA.orgs[slug] && DATA.orgs[slug].short) || slug;
+    const label = AXR_COL_LABELS[slug] || full;
+    const cat = catBySlug[slug] || '';
+    return `<th onclick="fecharMatrizVisual(); nav('atrib-${slug}')" title="${cat ? cat + ' — ' : ''}${full} (clique para abrir as atribuições)"><span>${label}</span></th>`;
+  }).join('');
+
+  const bodyRows = [];
+  M.fases.forEach(fase => {
+    const faseClass = faseSlugMatriz(fase.nome);
+    fase.atividades.forEach((a, idx) => {
+      const cells = cols.map(slug => {
+        const r = a.responsaveis.find(r => r.slug === slug);
+        if (!r) return `<td class="axr-visual-cell"></td>`;
+        const p = r.papel.toLowerCase();
+        return `<td class="axr-visual-cell"><span class="axr-visual-badge ${p}">${r.papel}</span></td>`;
+      }).join('');
+      bodyRows.push(`
+        <tr>
+          ${idx === 0 ? `<td class="axr-visual-phase-td ${faseClass}" rowspan="${fase.atividades.length}"><span>${fase.nome}</span></td>` : ''}
+          <td class="axr-visual-activity-td"><span class="num">${a.num}.</span>${a.texto}</td>
+          ${cells}
+        </tr>
+      `);
+    });
+  });
+
+  return `
+    <div class="axr-visual-header">
+      <div>
+        <h2>${M.titulo}</h2>
+        <p>Formato visual, semelhante à planilha de origem — clique no nome de um órgão para abrir suas atribuições.</p>
+      </div>
+      <button type="button" class="axr-visual-close" onclick="fecharMatrizVisual()"><svg viewBox="0 0 24 24" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="currentColor"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Fechar</span></button>
+    </div>
+    <div class="axr-visual-scroll">
+      <table class="axr-visual-table">
+        ${colgroup}
+        <thead>
+          <tr class="axr-visual-org-row">
+            <th class="axr-visual-corner axr-visual-phase-corner"></th>
+            <th class="axr-visual-corner axr-visual-act-corner" style="vertical-align:middle;">Atividades e respectivos responsáveis</th>
+            ${orgRow}
+          </tr>
+        </thead>
+        <tbody>
+          ${bodyRows.join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function abrirMatrizVisual(){
+  const overlay = document.getElementById('matrizVisualOverlay');
+  overlay.innerHTML = renderMatrizVisualHTML();
+  overlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function fecharMatrizVisual(){
+  const overlay = document.getElementById('matrizVisualOverlay');
+  overlay.style.display = 'none';
+  overlay.innerHTML = '';
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape'){
+    const overlay = document.getElementById('matrizVisualOverlay');
+    if (overlay && overlay.style.display !== 'none') fecharMatrizVisual();
+  }
+});
 
 function chipList(items, opts={}){
   const numbered = !!opts.numbered;
@@ -1633,6 +2059,15 @@ const SCREENS = {
         <div class="macro-text">
           <h3>PLANCON MACRO</h3>
           <p>Objetivo, metas, enquadramento legal e anexos técnico-operacionais do Plano completo.</p>
+        </div>
+        <div class="go">Abrir ${icon('chevron')}</div>
+      </div>
+
+      <div class="axr-highlight" onclick="nav('matriz-axr')">
+        <div class="icon">${icon('layers')}</div>
+        <div class="macro-text">
+          <h3>Matriz AxR — Atividades × Responsabilidades</h3>
+          <p>29 atividades do Plano e os órgãos responsáveis, coparticipantes e de apoio em cada uma delas.</p>
         </div>
         <div class="go">Abrir ${icon('chevron')}</div>
       </div>
@@ -1931,6 +2366,45 @@ const SCREENS = {
           </div>
         `;}).join('')}
       </div>
+    `
+  },
+
+  "matriz-axr": {
+    crumb: "Matriz AxR",
+    render: () => `
+      <div class="axr-title-row">
+        <div class="section-title">${DATA.matrizAxR.titulo}</div>
+        <button type="button" class="axr-visual-btn" onclick="abrirMatrizVisual()">${icon('layers')}Ver em formato visual</button>
+      </div>
+      <p class="section-desc">${DATA.matrizAxR.intro}</p>
+      <div class="axr-legend">
+        ${DATA.matrizAxR.legenda.map(l => `
+          <span class="axr-legend-item">
+            <span class="axr-legend-badge papel-${l.codigo.toLowerCase()}">${l.codigo}</span>
+            ${l.label} — ${l.desc}
+          </span>
+        `).join('')}
+      </div>
+      ${DATA.matrizAxR.fases.map(fase => `
+        <div class="section-title" style="font-size:16px; margin-top:26px;">${fase.nome}</div>
+        <div class="axr-list">
+          ${fase.atividades.map(a => `
+            <div class="axr-item">
+              <div class="axr-item-head">
+                <span class="num">${a.num}</span>
+                <p>${a.texto}</p>
+              </div>
+              <div class="axr-roles">
+                ${a.responsaveis.map(r => `
+                  <button type="button" class="axr-chip papel-${r.papel.toLowerCase()}" onclick="nav('atrib-${r.slug}')" title="${(DATA.orgs[r.slug] && DATA.orgs[r.slug].short) || r.slug}">
+                    ${(DATA.orgs[r.slug] && DATA.orgs[r.slug].short) || r.slug} <b>${r.papel}</b>
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `).join('')}
     `
   }
 };
