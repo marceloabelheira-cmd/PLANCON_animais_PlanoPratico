@@ -314,6 +314,12 @@
   .anexoitem.referencia:hover{ border-color: var(--blue-700); }
   .anexoitem.referencia .num{ background: var(--blue-600); color: var(--white); }
   .anexoitem.referencia .num svg{ width:14px; height:14px; stroke:currentColor; fill:none; }
+  .anexoitem.siglas{
+    background: var(--orange-100); border-color: var(--orange-600); cursor:pointer;
+  }
+  .anexoitem.siglas:hover{ border-color: var(--orange-500); }
+  .anexoitem.siglas .num{ background: var(--orange-600); color: var(--white); }
+  .anexoitem.siglas .num svg{ width:14px; height:14px; stroke:currentColor; fill:none; }
   @media (max-width:520px){
     .anexoitem{ flex-wrap:wrap; }
     .anexo-actions{ width:calc(100% - 39px); margin-left:39px; }
@@ -993,8 +999,8 @@ const DATA = {
       ]
     },
     ses_bemestar: {
-      org: "SES — SUPERINTENDÊNCIA DE AÇÕES ESTRATÉGICAS EM PROTEÇÃO E BEM-ESTAR ANIMAL (SAEPBA)",
-      short: "SES - SAEPBA",
+      org: "SES — SUPERINTENDÊNCIA DE AÇÕES ESTRATÉGICAS EM PROTEÇÃO E BEM-ESTAR ANIMAL (SUPAEPBEA)",
+      short: "SES - SUPAEPBEA",
       heading: "Competências",
       bullets: [
         "apoiar e articular na capacitação de recursos humanos para ações de proteção, acolhimento e de manejo de animais resgatados;",
@@ -2023,6 +2029,99 @@ const DATA = {
       "RIO DE JANEIRO. Lei nº 11.096, de 8 de janeiro de 2026. Dispõe sobre o novo Código Estadual de Direito dos Animais no Estado do Rio de Janeiro. Rio de Janeiro, RJ: Alerj, 2026.",
       "RIO DE JANEIRO. INEA. Resolução nº 157, de 19 de outubro de 2018. Dispõe sobre as categorias de uso e manejo da fauna silvestre, nativa e exótica em cativeiro, no território do Estado do Rio de Janeiro. Rio de Janeiro, RJ: INEA, 2018.",
       "UNISDR. Marco de Sendai para a Redução do Risco de Desastres 2015–2030. 1. ed. 2015."
+    ],
+    siglas: {
+      instituicoes: [
+        "<strong>ALERJ</strong>: Assembleia Legislativa do Estado do Rio de Janeiro",
+        "<strong>CBMERJ</strong>: Corpo de Bombeiros Militar do Estado do Rio de Janeiro",
+        "<strong>CEMADEN-RJ</strong>: Centro Estadual de Monitoramento e Alerta de Desastres Naturais do Estado do Rio de Janeiro",
+        "<strong>CETAS</strong>: Centro de Triagem de Animais Silvestres",
+        "<strong>CFMV</strong>: Conselho Federal de Medicina Veterinária",
+        "<strong>CONAMA</strong>: Conselho Nacional do Meio Ambiente",
+        "<strong>CONEMA</strong>: Conselho Estadual de Meio Ambiente do Estado do Rio de Janeiro",
+        "<strong>CRMV-RJ</strong>: Conselho Regional de Medicina Veterinária do Estado do Rio de Janeiro",
+        "<strong>EMATER-RIO</strong>: Empresa de Assistência Técnica e Extensão Rural do Estado do Rio de Janeiro",
+        "<strong>FIPERJ</strong>: Fundação Instituto de Pesca do Estado do Rio de Janeiro",
+        "<strong>GRAC</strong>: Grupo de Ações Coordenadas",
+        "<strong>IBAMA</strong>: Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis",
+        "<strong>INEA</strong>: Instituto Estadual do Ambiente",
+        "<strong>MAPA</strong>: Ministério da Agricultura e Pecuária",
+        "<strong>ONG / ONGs</strong>: Organização(ões) Não Governamental(is)",
+        "<strong>REDEC / REDECs</strong>: Regional(ais) de Proteção e Defesa Civil",
+        "<strong>Rede SALVAR</strong>: Rede Integrada de Resgate e Socorro Animal em Desastres",
+        "<strong>SEAPPADI / SEAPPA</strong>: Secretaria de Estado de Agricultura, Pecuária, Pesca, Abastecimento e Desenvolvimento do Interior do Rio de Janeiro",
+        "<strong>SEAS</strong>: Secretaria de Estado do Ambiente e Sustentabilidade do Rio de Janeiro",
+        "<strong>SEDEC / SEDEC-RJ</strong>: Secretaria de Estado de Defesa Civil do Rio de Janeiro",
+        "<strong>SEEDUC</strong>: Secretaria de Estado de Educação do Rio de Janeiro",
+        "<strong>SEPOL</strong>: Secretaria de Estado de Polícia Civil do Rio de Janeiro",
+        "<strong>SEPM</strong>: Secretaria de Estado de Polícia Militar do Rio de Janeiro",
+        "<strong>SETRAM</strong>: Secretaria de Estado de Transporte e Mobilidade Urbana do Rio de Janeiro",
+        "<strong>SEDSODH</strong>: Secretaria de Estado de Desenvolvimento Social e Direitos Humanos do Rio de Janeiro",
+        "<strong>SES / SES-RJ</strong>: Secretaria de Estado de Saúde do Rio de Janeiro",
+        "<strong>SIEPDEC</strong>: Sistema Estadual de Proteção e Defesa Civil",
+        "<strong>SUPAEPBEA</strong>: Superintendência de Ações Estratégicas em Proteção e Bem-Estar Animal (vinculada à SES-RJ)",
+        "<strong>SVO</strong>: Serviço Veterinário Oficial",
+        "<strong>UNESCO</strong>: Organização das Nações Unidas para a Educação, a Ciência e a Cultura",
+        "<strong>UNISDR</strong>: Estratégia Internacional das Nações Unidas para a Redução de Desastres (atual UNDRR)"
+      ],
+      metodos: [
+        "<strong>APH Veterinário</strong>: Atendimento Pré-Hospitalar Veterinário",
+        "<strong>EPI</strong>: Equipamento de Proteção Individual",
+        "<strong>FeLV</strong>: Vírus da Leucemia Felina (<em>Feline Leukemia Virus</em>)",
+        "<strong>FIV</strong>: Vírus da Imunodeficiência Felina (<em>Feline Immunodeficiency Virus</em>)",
+        "<strong>GPS</strong>: Sistema de Posicionamento Global (<em>Global Positioning System</em>)",
+        "<strong>PLANCON</strong>: Plano de Contingência",
+        "<strong>PLANCON-SEIF</strong>: Plano de Contingência Específico para o Enfrentamento de Incêndios Florestais e Período de Estiagem",
+        "<strong>PMVA</strong>: Posto Médico-Veterinário Avançado",
+        "<strong>POP</strong>: Procedimento Operacional Padrão",
+        "<strong>S2ID</strong>: Sistema Integrado de Informações sobre Desastres",
+        "<strong>SBV</strong>: Suporte Básico de Vida",
+        "<strong>SCI</strong>: Sistema de Comando de Incidentes (<em>Incident Command System</em>)",
+        "<strong>TI</strong>: Tecnologia da Informação",
+        "<strong>V10</strong>: Vacina Decavalente para cães (protege contra cinomose, parvovirose, coronavirose, adenovirose tipos 1 e 2, parainfluenza e quatro sorovares de leptospirose)",
+        "<strong>V-START</strong>: <em>Veterinary Simple Triage and Rapid Treatment</em> (Adaptação Veterinária do Método Simples de Triagem e Rápido Tratamento)"
+      ]
+    },
+    glossario: [
+      "<strong>Abrigos Coabitados</strong>: Estruturas de acolhimento emergencial planejadas para permitir a permanência física conjunta de tutores/responsáveis humanos e seus animais de companhia no mesmo recinto ou acomodação, reduzindo o estresse e facilitando o manejo.",
+      "<strong>Abrigos Colocalizados</strong>: Instalações de acolhimento animal estruturadas em terrenos anexos ou muito próximos aos abrigos de desabrigados humanos, viabilizando visitas regulares, cuidados contínuos e a preservação do vínculo socioafetivo.",
+      "<strong>Abrigos Exclusivos para Animais</strong>: Estruturas emergenciais autônomas instaladas em locais apropriados (como galpões, centros comunitários ou arenas rurais), destinadas exclusivamente ao acolhimento, segregação e manejo de animais cujos responsáveis não possam ser mantidos juntos ou de animais desacompanhados/resgatados em campo.",
+      "<strong>Afugentamento Preventivo</strong>: Técnica de manejo de fauna executada por especialistas autorizados para dispersar ou orientar preventivamente espécimes silvestres para fora de áreas sob iminente perigo de desastre (como fogo ou inundações) sem a necessidade de contenção física prolongada.",
+      "<strong>Animais Braquicefálicos</strong>: Animais que possuem conformação anatômica craniofacial encurtada (focinho achatado, comum em raças como Pug, Buldogue, Boxer, Gato Persa), predispostos a colapsos respiratórios, hipertermia rápida e baixa resistência ao estresse térmico em situações de crise.",
+      "<strong>Animais Comunitários</strong>: Animais que, apesar de não terem um tutor formal ou domicílio fixo, estabelecem laços de afeto e dependência mútua de cuidado, alimentação e proteção com determinado grupo comunitário ou vizinhança.",
+      "<strong>Animais Domésticos</strong>: Espécies que passaram por longo processo evolutivo de domesticação e seleção, integrando o convívio humano direto em papéis de companhia, tração, montaria, produção pecuária ou lazer (ex.: cães, gatos, bovinos, equinos, caprinos, ovinos e aves domésticas).",
+      "<strong>Animais Domiciliados</strong>: Animais de estimação ou criação que possuem tutor individual, residência fixa e vivem sob tutela, controle e responsabilidade patrimonial/afetiva familiar.",
+      "<strong>Animais Errantes</strong>: Animais domésticos que se encontram desacompanhados, perdidos, sem identificação e sem vínculo assistencial regular na via pública ou no ambiente afetado pelo desastre.",
+      "<strong>Animais Silvestres</strong>: Espécies de fauna nativa ou exótica que vivem naturalmente fora da dependência de manejo ou domesticação humana, abrangendo tanto espécimes de vida livre em seus biomas quanto indivíduos em cativeiro devidamente autorizado.",
+      "<strong>Avaliação de Danos e Análise de Necessidades para Animais</strong>: Levantamento técnico, quantitativo e qualitativo pós-impacto, realizado para identificar o total de animais afetados, mortos, doentes, necessidades de abrigo, insumos de alimentação, medicamentos e riscos sanitários na área atingida.",
+      "<strong>Cambão</strong>: Instrumento mecânico de contenção física (haste rígida com cabo de aço retrátil ou laço) utilizado por resgatistas para conter e guiar cães ou pequenos mamíferos agressivos, assustados ou de difícil manuseio, resguardando a integridade física do operador.",
+      "<strong>Carga Viva</strong>: Transporte rodoviário especializado de lotes de animais de produção (bovinos, suínos, frangos, equinos); em acidentes com tombamento, configura evento de alta complexidade pela dispersão de animais politraumatizados em vias públicas.",
+      "<strong>Cinco Liberdades do Bem-Estar Animal</strong>: Parâmetro internacional e ético de cuidado que postula que o animal deve viver livre de: 1) fome e sede; 2) desconforto físico e térmico; 3) dor, ferimentos e doenças; 4) medo e estresse; e 5) livre para expressar seu comportamento natural.",
+      "<strong>Contenção Física e Contenção Química</strong>:<ul class=\"bullets\" style=\"margin-top:6px;\"><li><em>Física</em>: Utilização de equipamentos e técnicas manuais ou mecânicas (focinheiras, guias, cambões, cabrestos, redes, puçás) para imobilizar o animal.</li><li><em>Química</em>: Administração de sedativos, tranquilizantes ou anestésicos (por dardos, zarabatanas ou seringas), procedimento de ato privativo do médico-veterinário para contenção em casos de agressividade extrema, trauma grave ou captura complexa.</li></ul>",
+      "<strong>Ectoparasitas</strong>: Parasitas que vivem na superfície externa do hospedeiro, pele, pelos ou penas (ex.: carrapatos, pulgas, piolhos, ácaros), com rápida proliferação em locais de aglomeração como abrigos temporários.",
+      "<strong>Endoparasitas</strong>: Parasitas que infectam órgãos internos ou tecidos corporais dos animais (ex.: vermes gastrointestinais, ancilóstomos, lombrigas, protozoários), agravando quadros de desnutrição e diarreia em cenários de abrigo.",
+      "<strong>Enriquecimento Ambiental</strong>: Conjunto de estímulos físicos, sensoriais, alimentares e cognitivos implementados nas instalações de abrigo (brinquedos, prateleiras altas para felinos, áreas de recreação) para reduzir o confinamento prolongado, a agressividade e o estresse dos animais alojados.",
+      "<strong>Eutanásia Humanitária</strong>: Procedimento técnico executado privativamente por médico-veterinário por meio de métodos farmacológicos cientificamente aprovados, visando à cessação rápida e indolor da vida do animal em casos de sofrimento extremo, politraumatismos irreversíveis ou patologias terminais intratáveis.",
+      "<strong>Família Multiespécie</strong>: Conceito sociológico e jurídico contemporâneo que reconhece o núcleo sociofamiliar formado por seres humanos e seus animais de companhia, sustentado por laços estreitos de apego, afetividade e reciprocidade de cuidados.",
+      "<strong>Gancho Herpetológico</strong>: Ferramenta metálica com extremidade curva utilizada para manipulação e captura segura de serpentes e outros répteis, minimizando o risco de acidentes ofídicos.",
+      "<strong>Hierarquia de Destinação</strong>: Ordenamento legal e operacional que define as prioridades no encaminhamento dos animais pós-resgate: 1º) Reunificação com a família multiespécie de origem; 2º) Devolução direta aos produtores rurais; 3º) Adoção responsável e lares temporários; 4º) Encaminhamento a abrigos ou centros especializados/CETAS (silvestres).",
+      "<strong>Imunobiológico</strong>: Produto biológico farmacêutico, como vacinas e soros hiperimunes, destinado a conferir imunidade ativa ou passiva contra enfermidades infecciosas específicas (ex.: antirrábica, polivalente V10).",
+      "<strong>Lei Amar (Lei Federal nº 15.355/2026)</strong>: Marco regulatório nacional que institui a Política de Acolhimento e Manejo de Animais Resgatados em desastres, determinando responsabilidades civis, financeiras e operacionais (inclusive a reparação de despesas por particulares ou empresas causadoras de catástrofes).",
+      "<strong>Maca tipo Sked</strong>: Equipamento flexível e semirrígido de resgate e arraste, dotado de amarras reforçadas, projetado para o içamento e transporte seguro de animais de grande porte (como equinos) em locais acidentados, confinados ou em ribanceiras.",
+      "<strong>Manejo Populacional Ético</strong>: Conjunto de ações voltadas ao equilíbrio populacional de cães e gatos sem utilização de extermínio, baseado em vacinação, identificação por microchip, educação comunitária, esterilização cirúrgica (castração) e incentivo à posse responsável.",
+      "<strong>Miopatia de Captura</strong>: Síndrome metabólica grave comum em animais silvestres (principalmente ungulados e aves), desencadeada pelo estresse extremo, medo e esforço físico excessivo durante a perseguição e contenção física, causando necrose muscular e parada cardiorrespiratória.",
+      "<strong>Mochila de Emergência Pet</strong>: Kit prévio montado pelas famílias contendo carteira sanitária, ração e água para pelo menos 72 horas, medicamentos de uso contínuo, caixas de transporte, coleiras, guias e identificação do animal para pronta evacuação.",
+      "<strong>Mortuário Veterinário</strong>: Instalação provisória de biossegurança dotada de isolamento térmico e sanitário destinada à conservação, identificação, registro pericial/fotográfico e guarda provisória de carcaças animais antes da destinação final.",
+      "<strong>Posto Médico-Veterinário Avançado (PMVA)</strong>: Unidade médica provisória montada em Zona Fria/transição para prestar o primeiro socorro, estabilização hemodinâmica, analgesia e oxigenioterapia aos animais recém-retirados da área de risco.",
+      "<strong>Puçá</strong>: Rede de aro metálico montada sobre cabo longo, utilizada para capturar de forma rápida e segura animais de pequeno e médio porte em fuga ou estresse.",
+      "<strong>Quarentena</strong>: Isolamento profilático compulsório de animais recém-chegados por período determinado, impedindo a introdução de novos agentes patogênicos no coletivo de animais abrigados.",
+      "<strong>Rastreabilidade Animal</strong>: Metodologia sistêmica que associa cada animal a um prontuário e número sequencial de registro desde o momento da extração na cena de desastre, triagem, internação, até o acolhimento e destino final (tutor, adoção ou soltura).",
+      "<strong>Saúde Única (One Health)</strong>: Modelo transdisciplinar que reconhece a indissociabilidade absoluta entre a integridade da saúde dos ecossistemas ambientais, a sanidade dos animais e a saúde das populações humanas.",
+      "<strong>Senciência Animal</strong>: Condição cientificamente comprovada e juridicamente reconhecida de que os animais não são meras coisas, mas seres vivos conscientes, plenamente capazes de vivenciar estados emocionais positivos ou negativos (dor, angústia, medo, prazer e bem-estar).",
+      "<strong>Testes Rápidos de Triagem</strong>: Ensaios imunocromatográficos de ponto de atendimento (<em>point-of-care</em>) utilizados para detecção imediata de infecções graves em abrigos (ex.: FIV/FeLV para felinos; cinomose e parvovirose para caninos).",
+      "<strong>V-START (Veterinary Simple Triage and Rapid Treatment)</strong>: Protocolo de triagem rápida que avalia o animal em até 60 segundos por meio de parâmetros objetivos (respiração, perfusão/circulação, pulso e nível de consciência), categorizando as vítimas em quatro cores:<ul class=\"bullets\" style=\"margin-top:6px;\"><li><em>Vermelho (Imediato)</em>: Risco iminente de morte com alta chance de sobrevivência após intervenção médica rápida;</li><li><em>Amarelo (Urgente/Diferido)</em>: Lesões moderadas que requerem atendimento, mas com estabilidade sistêmica temporária;</li><li><em>Verde (Leve/Ambulatorial)</em>: Ferimentos superficiais, estresse ou claudicações leves;</li><li><em>Cinza/Preto (Expectante ou Óbito)</em>: Animais mortos ou com politraumatismo tão grave e incompatível com a vida que impõe eutanásia humanitária ou suporte paliativo extremo.</li></ul>",
+      "<strong>Zonear Operacional do Incidente (Zonas Quente, Morna e Fria)</strong>:<ul class=\"bullets\" style=\"margin-top:6px;\"><li><em>Zona Quente</em>: Área de impacto direto, onde há perigo iminente à vida (fogo ativo, escombros, correntezas, contaminação química); restrita a pessoal especializado de resgate dotado de EPI completo;</li><li><em>Zona Morna</em>: Perímetro de descontaminação e suporte tático intermediário;</li><li><em>Zona Fria</em>: Perímetro totalmente seguro onde se concentram a coordenação (SCI), o Posto Médico-Veterinário Avançado, os abrigos e a logística assistencial.</li></ul>",
+      "<strong>Zoonoses</strong>: Doenças infecciosas ou parasitárias naturalmente transmissíveis entre animais e seres humanos (ex.: leptospirose, raiva, esporotricose, leishmaniose, brucelose e influenza aviária), com alto potencial de propagação após enchentes e catástrofes climáticas."
     ]
   },
 
@@ -2309,7 +2408,7 @@ function faseSlugMatriz(nome){
    nomes completos continuam em DATA.orgs.short e aparecem no tooltip/título ao passar o mouse. */
 const AXR_COL_LABELS = {
   sedec: "SEDEC-RJ / CBMERJ",
-  ses_bemestar: "SES - SAEPBA",
+  ses_bemestar: "SES - SUPAEPBEA",
   ses_vigilancia: "SES - Vig. Saúde",
   crmv: "CRMV-RJ",
   seappadi: "SEAPPADI - Def. Agropec.",
@@ -2752,7 +2851,7 @@ const SCREENS = {
         <div class="card orange" onclick="nav('plancon-macro-anexos')">
           <div class="icon">${icon('folder')}</div>
           <h3>Anexos</h3>
-          <p>Protocolos técnico-operacionais e referências bibliográficas que instrumentalizam a execução do Plano.</p>
+          <p>Protocolos técnico-operacionais, lista de siglas, glossário e referências bibliográficas que instrumentalizam a execução do Plano.</p>
           <div class="go">Abrir ${icon('chevron')}</div>
         </div>
       </div>
@@ -2926,6 +3025,24 @@ const SCREENS = {
     `
   },
 
+  "plancon-macro-siglas": {
+    crumb: "Lista de Siglas e Glossário",
+    render: () => `
+      <div class="section-title">Lista de Siglas e Glossário</div>
+      <div class="panel">
+        <h4>Parte 1 — Lista de Siglas e Instituições</h4>
+        <p style="font-weight:600; margin-bottom:6px;">1. Órgãos, Entidades e Estruturas Institucionais / Operacionais</p>
+        ${bullets(DATA.planconMacro.siglas.instituicoes)}
+        <p style="font-weight:600; margin:18px 0 6px;">2. Siglas de Métodos, Ferramentas, Normas e Sistemas</p>
+        ${bullets(DATA.planconMacro.siglas.metodos)}
+      </div>
+      <div class="panel">
+        <h4>Parte 2 — Glossário de Conceitos, Instrumentos e Termos Técnicos</h4>
+        ${bullets(DATA.planconMacro.glossario)}
+      </div>
+    `
+  },
+
   "plancon-macro-anexos": {
     crumb: "Anexos",
     render: () => `
@@ -2935,6 +3052,13 @@ const SCREENS = {
         <p>Os anexos a seguir reúnem os protocolos técnicos, especificações operacionais, tabelas de dimensionamento, formulários e referências que instrumentalizam a execução do PLANCON. Este conteúdo é de natureza eminentemente técnica e deverá ser aplicado, interpretado e atualizado sob supervisão de médico-veterinário e da coordenação técnica competente, observadas sempre as diretrizes de governança e as competências institucionais fixadas no corpo principal deste Plano.</p>
       </div>
       <div class="anexolist">
+        <div class="anexoitem siglas" onclick="nav('plancon-macro-siglas')">
+          <span class="num">${icon('search')}</span>
+          <span class="anexo-title">Lista de Siglas e Glossário</span>
+          <span class="anexo-actions">
+            <button type="button" class="anexo-btn" onclick="event.stopPropagation(); nav('plancon-macro-siglas')">${icon('chevron')}Abrir</button>
+          </span>
+        </div>
         <div class="anexoitem referencia" onclick="nav('plancon-macro-referencias')">
           <span class="num">${icon('book')}</span>
           <span class="anexo-title">Referências Bibliográficas</span>
