@@ -2989,14 +2989,14 @@ const SCREENS = {
       </div>
 
       <div class="macro-divider">Outros Materiais</div>
-      <a class="macro-link" href="https://marceloabelheira-cmd.github.io/SEDECRJ_produtosONLINE/" target="_blank" rel="noopener">
+      <div class="macro-link" onclick="nav('produtos')">
         <div class="icon">${icon('layers')}</div>
         <div class="macro-text">
           <h3>Outros Produtos da SEDEC-RJ</h3>
           <p>Painéis, dashboards e sites desenvolvidos pela equipe para apoiar as ações de Defesa Civil do Estado do Rio de Janeiro.</p>
         </div>
-        <div class="go">Abrir ${icon('external')}</div>
-      </a>
+        <div class="go">Abrir ${icon('chevron')}</div>
+      </div>
     `
   },
 
@@ -3484,6 +3484,93 @@ const SCREENS = {
           `).join('')}
         </div>
       `).join('')}
+    `
+  },
+
+  produtos: {
+    crumb: "Outros Produtos",
+    render: () => `
+      <div class="section-title">Outros Produtos da SEDEC-RJ</div>
+      <p class="section-desc">Sites, painéis e dashboards desenvolvidos para a gestão de riscos e desastres no Estado do Rio de Janeiro. Os links abrem em nova aba.</p>
+
+      <div class="macro-divider">Canais Oficiais da SEDEC-RJ</div>
+      <div class="macro-row">
+        <a class="macro-link" href="https://www.defesacivil.rj.gov.br/" target="_blank" rel="noopener">
+          <div class="icon">${icon('home')}</div>
+          <div class="macro-text">
+            <h3>Site da SEDEC-RJ</h3>
+            <p>Secretaria de Estado de Defesa Civil do Rio de Janeiro.</p>
+          </div>
+          <div class="go">Abrir ${icon('external')}</div>
+        </a>
+        <a class="macro-link" href="https://www.instagram.com/defesacivil_rj/" target="_blank" rel="noopener">
+          <div class="icon">${icon('users')}</div>
+          <div class="macro-text">
+            <h3>Instagram da SEDEC-RJ</h3>
+            <p>@defesacivil_rj</p>
+          </div>
+          <div class="go">Abrir ${icon('external')}</div>
+        </a>
+      </div>
+
+      <div class="macro-divider">Incêndios Florestais</div>
+      <a class="macro-link" href="https://marceloabelheira-cmd.github.io/IF2025/#2026" target="_blank" rel="noopener">
+        <div class="icon">${icon('fire')}</div>
+        <div class="macro-text">
+          <h3>Dashboard de Incêndios Florestais</h3>
+          <p>Período crítico em 2025 e 2026 — publicado no Encontro com a Ciência 2026.</p>
+        </div>
+        <div class="go">Abrir ${icon('external')}</div>
+      </a>
+
+      <div class="macro-divider">Chuvas</div>
+      <a class="macro-link" href="https://marceloabelheira-cmd.github.io/ESCALAv4/" target="_blank" rel="noopener">
+        <div class="icon">${icon('flood')}</div>
+        <div class="macro-text">
+          <h3>Dashboard de Chuvas — nov/25 a abr/26</h3>
+          <p>Publicado no Encontro com a Ciência 2026.</p>
+        </div>
+        <div class="go">Abrir ${icon('external')}</div>
+      </a>
+
+      <div class="macro-divider">Planos de Contingência (PLANCON)</div>
+      <div class="macro-row">
+        <a class="macro-link" href="https://marceloabelheira-cmd.github.io/PLANCON_animais_PlanoPratico/" target="_blank" rel="noopener">
+          <div class="icon">${icon('paw')}</div>
+          <div class="macro-text">
+            <h3>PLANCON Animais</h3>
+            <p>Resgate, acolhimento, manejo e destinação de animais em desastres.</p>
+          </div>
+          <div class="go">Abrir ${icon('external')}</div>
+        </a>
+        <a class="macro-link" href="https://marceloabelheira-cmd.github.io/PLANCON_IF_2026/" target="_blank" rel="noopener">
+          <div class="icon">${icon('fire')}</div>
+          <div class="macro-text">
+            <h3>PLANCON Incêndios Florestais</h3>
+            <p>Plano de Contingência Estadual para Incêndios Florestais — 2026.</p>
+          </div>
+          <div class="go">Abrir ${icon('external')}</div>
+        </a>
+      </div>
+      <a class="macro-link" href="https://marceloabelheira-cmd.github.io/PLANCON_CHUVAS_2026.2027/" target="_blank" rel="noopener" style="margin-top:14px;">
+        <div class="icon">${icon('flood')}</div>
+        <div class="macro-text">
+          <h3>PLANCON Chuvas 2026–2027</h3>
+          <p>Plano de Contingência Estadual para Chuvas Intensas — biênio 2026–2027.</p>
+        </div>
+        <div class="go">Abrir ${icon('external')}</div>
+      </a>
+
+      <div class="macro-divider">Prevenção e Preparação</div>
+      <a class="axr-highlight" href="https://marceloabelheira-cmd.github.io/SEDEC_acoesdeprevencao.preparacao_GRAC.e.outros/" target="_blank" rel="noopener">
+        <div class="icon">${icon('shield')}</div>
+        <div class="macro-text">
+          <span class="produto-tag">Destaque</span>
+          <h3>Painel de Ações Preventivas</h3>
+          <p>Ações de prevenção, preparação, GRAC e outras iniciativas da SEDEC-RJ.</p>
+        </div>
+        <div class="go">Abrir ${icon('external')}</div>
+      </a>
     `
   },
 
